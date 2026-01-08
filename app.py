@@ -5,7 +5,7 @@ import zipfile
 from typing import Optional
 
 import streamlit as st
-from svglib.svglib import renderSVG
+from svglib.svglib import svg2rlg
 from reportlab.graphics import renderPM
 
 
@@ -22,7 +22,7 @@ def convert_svg_to_png(svg_content: bytes, scale: float = 1.0) -> Optional[bytes
     try:
         # Parse SVG from bytes
         svg_io = io.BytesIO(svg_content)
-        drawing = renderSVG.renderSVG(svg_io)
+        drawing = svg2rlg(svg_io)
 
         # Apply scale
         if scale != 1.0:
