@@ -1,0 +1,18 @@
+# Images
+*.svg
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Output folders
+png_output/
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
